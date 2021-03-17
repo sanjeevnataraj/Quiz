@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+<html>
+    <head>
+        {% block css %}
+            <link rel="stylesheet" href="{% static 'css/signup.css' %}" type="text/css">
+        {% endblock css %}
+    </head>
+    <body>
+        {% block content %}
+        
+        <div class="signup">
+            <h1>Registration</h1>
+            <form id="registration" method="post" >
+                {% csrf_token %}
+                <div class="{%if form.username.errors %}error {% endif %}">
+                    <label>Username </label>
+                    {{form.username}}
+                    {% if form.username.errors %}
+                        <div class="form-control-feedback">{{ form.username.errors }}</div>
+                    {% endif %}
+                </div>
+                <label>Email </label>
+                {{form.email}}
+                {% if form.email.errors %}
+                    <div class="form-control-feedback">{{ form.email.errors }}</div>
+                {% endif %}
+                <label>Password </label>
+                {{form.password}}
+                {% if form.password.errors %}
+                    <div class="form-control-feedback">{{ form.password.errors }}</div>
+                {% endif %}
+                <label>Re-Password </label>
+                {{form.password1}}
+                {% if form.password1.errors %}
+                    <div class="form-control-feedback">{{ form.password1.errors }}</div>
+                {% endif %}
+                <br>
+                <input type="submit" id="submit-button" value="submit" style="background-color:rgba(89, 79, 139, 0.288)">
+
+            </form>
+        </div>
+        {% endblock %}
+
+        
+    </body>
+</html>

@@ -1,0 +1,28 @@
+body{
+    margin:0;
+    background-image:url('/static/images/homepage.gif')
+    }
+.logo{
+    display: flex;
+    width: 120px;
+    height: 71px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.nav-items{
+    display: flex;
+    font-size: 28px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 30px;
+}  
+.nav-items a{
+    text-decoration: none;
+    color: white;
+}
+.nav-menu{
+    display: flex;
+    background-color: black;
+}

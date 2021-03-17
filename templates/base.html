@@ -1,0 +1,33 @@
+{% load static %}
+
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css">
+
+        {% block seo %}
+            <title>Neet Quiz</title>
+        {% endblock seo %}
+        {% block css %}
+        {% endblock css %}
+        {% block jquery %}
+        {% endblock jquery %}
+    </head>
+    <body>
+        <div class="nav-menu">
+            <div class="logo">
+                <img src="{% static '/images/Quiz.jpg'%}" alt="Quiz">
+            </div>
+            <div class="nav-items">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Signup</a></li>
+                <li><a href="/about">About</a></li>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock content %}
+    </body>
+</html>

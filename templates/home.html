@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+<html>
+    <head>
+        {% block css %}
+            <link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css">
+        {% endblock css %}
+    </head>
+    <body>
+        {% block content %}
+        <div class="main-content">
+            <p>Welcome to Neet practice Quiz</p>
+        </div>
+        {% endblock %}
+
+    </body>
+</html>
