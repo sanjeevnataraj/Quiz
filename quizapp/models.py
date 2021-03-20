@@ -7,7 +7,7 @@ from django.utils import timezone
 
 # Create your models here.
 class User(AbstractBaseUser,PermissionsMixin):
-    username = models.CharField(_('username'),unique=False, max_length=235, blank=True, null=True)
+    username = models.CharField(_('username'),unique=False, max_length=235)
     email = models.EmailField(_('email address'), max_length=254, unique=True)
     first_name = models.CharField(_('first name'), max_length=30, blank=True)
     last_name = models.CharField(_('last name'), max_length=30, blank=True)

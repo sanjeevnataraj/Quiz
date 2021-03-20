@@ -13,31 +13,40 @@
             <h1>Registration</h1>
             <form id="registration" method="post" >
                 {% csrf_token %}
-                <div class="{%if form.username.errors %}error {% endif %}">
+                <div class="{%if form.username.errors %}error{% endif %}">
                     <label>Username </label>
                     {{form.username}}
                     {% if form.username.errors %}
                         <div class="form-control-feedback">{{ form.username.errors }}</div>
                     {% endif %}
                 </div>
+                <div class="{%if form.email.errors %}error{% endif %}">
                 <label>Email </label>
-                {{form.email}}
-                {% if form.email.errors %}
-                    <div class="form-control-feedback">{{ form.email.errors }}</div>
-                {% endif %}
-                <label>Password </label>
-                {{form.password}}
-                {% if form.password.errors %}
-                    <div class="form-control-feedback">{{ form.password.errors }}</div>
-                {% endif %}
-                <label>Re-Password </label>
-                {{form.password1}}
-                {% if form.password1.errors %}
-                    <div class="form-control-feedback">{{ form.password1.errors }}</div>
-                {% endif %}
+                    {{form.email}}
+                    {% if form.email.errors %}
+                        <div class="form-control-feedback">{{ form.email.errors }}</div>
+                    {% endif %}
+                </div>
+                <div class="{%if form.password.errors %}error{% endif %}">
+                    <label>Password </label>
+                    {{form.password}}
+                    {% if form.password.errors %}
+                        <div class="form-control-feedback">{{ form.password.errors }}</div>
+                    {% endif %}
+                    
+                </div>
+                <div class="{%if form.password1.errors %}error{% endif %}">
+                    <label>Re-Password </label>
+                    {{form.password1}}
+                    {% if form.password1.errors %}
+                        <div class="form-control-feedback">{{ form.password1.errors }}</div>
+                    {% endif %}
+                 
+                </div>
                 <br>
                 <input type="submit" id="submit-button" value="submit" style="background-color:rgba(89, 79, 139, 0.288)">
 
+               
             </form>
         </div>
         {% endblock %}

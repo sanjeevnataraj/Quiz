@@ -3,7 +3,7 @@ from django.views.generic import TemplateView,CreateView
 from .forms import RegistrationPageForm
 from .models import User
 from django.urls import reverse_lazy
-from django.http import HttpResponse, HttpResponseForbidden
+from django.http import HttpResponse, HttpResponseForbidden,HttpResponseRedirect
 from django.contrib import messages
 
 
